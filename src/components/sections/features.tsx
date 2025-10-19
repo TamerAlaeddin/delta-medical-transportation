@@ -115,7 +115,7 @@ export function Features() {
             Reliable Medical Transportation in New Jersey
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            We're committed to providing safe, comfortable, and professional medical transportation 
+            We&apos;re committed to providing safe, comfortable, and professional medical transportation 
             services throughout New Jersey.
           </p>
         </div>
