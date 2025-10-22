@@ -21,7 +21,7 @@ export function Features() {
       ),
     },
     {
-      title: "Wheelchair Accessible",
+      title: "Wheelchair Accessible & Stretcher Transport",
       description: "Wheelchair lifts, stretcher capabilities, and specialized equipment for all mobility levels and medical needs.",
       color: "green",
       icon: (

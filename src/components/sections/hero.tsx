@@ -125,7 +125,7 @@ export function Hero() {
                 aria-label="Book an appointment"
                 className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white px-10 py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                Book Appointment
+                Request an Estimate
               </Button>
               <a href={`tel:${COMPANY_INFO.phone.replace(/\D/g, "")}`}>
                 <Button

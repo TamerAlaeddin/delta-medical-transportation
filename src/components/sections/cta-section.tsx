@@ -21,15 +21,17 @@ export function CTASection() {
       
       <div className="relative container mx-auto px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full h-[350px] md:h-[450px] lg:h-[550px] flex items-center justify-center">
+          <div className="relative w-full h-[400px] md:h-[450px] lg:h-[550px] flex items-center justify-center">
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-black/20 blur-2xl rounded-full"></div>
             
-            <div className="relative w-full h-full scale-[2]">
+            {/* Smaller and moved left */}
+            <div className="relative w-full h-full scale-[1.3] md:scale-110 lg:scale-125 md:-mt-12 lg:-mt-32">
               <Image 
                 src="/images/car.png" 
                 alt="Delta Medical Transport Vehicle - Wheelchair accessible van"
                 fill
                 className="object-contain"
+                style={{ objectPosition: '40% center' }}
                 loading="lazy"
                 quality={75}
                 sizes="(max-width: 768px) 100vw, 50vw"

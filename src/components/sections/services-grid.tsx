@@ -87,14 +87,16 @@ export function ServicesGrid() {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-green-600 to-green-700 p-1">
             <div className="bg-white rounded-[22px] overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                <div className="relative h-64 md:h-auto">
-                  <Image 
-                    src="/images/car.png" 
-                    alt="Delta Medical Transport Fleet"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
+                <div className="relative h-80 md:h-auto md:min-h-[450px] p-4 md:p-8 flex items-center justify-center">
+                  <div className="relative w-full h-full scale-125 md:scale-110">
+                    <Image 
+                      src="/images/car.png" 
+                      alt="Delta Medical Transport Fleet"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
                 </div>
                 
                 <div className="p-8 md:p-12 flex flex-col justify-center">
@@ -129,7 +131,7 @@ export function ServicesGrid() {
                     onClick={scrollToForm}
                     className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    Book a Ride Today
+                    Request an Estimate Today
                   </Button>
                 </div>
               </div>
@@ -141,16 +143,11 @@ export function ServicesGrid() {
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Serving All of New Jersey
           </h3>
-          <p className="text-lg text-green-100 max-w-2xl mx-auto mb-6">
-            From Newark to Jersey City, Paterson to Elizabeth - we provide reliable medical transportation across the Garden State.
+          <p className="text-lg text-green-100 max-w-3xl mx-auto mb-6">
+            We provide reliable medical transportation throughout the entire Garden State. 
+            Our professional drivers are familiar with all routes and facilities across New Jersey, 
+            ensuring you receive timely and safe service wherever you need to go.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 text-sm">
-            {["Newark", "Jersey City", "Paterson", "Elizabeth", "Edison", "Woodbridge", "And More"].map((city) => (
-              <span key={city} className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
-                {city}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>
