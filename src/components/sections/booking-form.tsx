@@ -9,7 +9,7 @@ import { COMPANY_INFO } from "@/lib/constants";
 export function BookingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [error, setError] = useState("");
+  const [formError, setFormError] = useState("");
   
   // Estimate calculator state
   const [vehicleType, setVehicleType] = useState<'wheelchair' | 'ambulance'>('wheelchair');
@@ -44,7 +44,7 @@ export function BookingForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setError("");
+    setFormError("");
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -80,10 +80,10 @@ export function BookingForm() {
           setShowForm(false);
         }, 5000);
       } else {
-        setError("Failed to submit. Please try calling us instead.");
+        setFormError("Failed to submit. Please try calling us instead.");
       }
-    } catch (error) {
-      setError("Failed to submit. Please try calling us instead.");
+    } catch {
+      setFormError("Failed to submit. Please try calling us instead.");
     } finally {
       setIsSubmitting(false);
     }
@@ -177,7 +177,7 @@ export function BookingForm() {
                   <ul className="list-disc list-inside space-y-1">
                     <li>This is an estimate only</li>
                     <li>Final price may vary based on patient weight, stairs, wait times, and other factors</li>
-                    <li>We'll confirm the exact price when you call to book</li>
+                    <li>We&apos;ll confirm the exact price when you call to book</li>
                   </ul>
                 </div>
               </div>
@@ -197,9 +197,9 @@ export function BookingForm() {
                 </div>
               )}
 
-              {error && (
+              {formError && (
                 <div className="mb-6 p-4 bg-red-50 border-2 border-red-200 rounded-xl text-red-800 text-center">
-                  {error}
+                  {formError}
                 </div>
               )}
 
